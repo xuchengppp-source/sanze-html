@@ -1,30 +1,111 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="zh-CN">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>三泽创投投资历程详细梳理（IVD及医疗健康领域）</title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2685.4">
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <style>
-    body { font-family: 'Inter', 'Noto Sans SC', sans-serif; background-color: #FFFFFF; }
-    .card { background-color: white; border: 1px solid #E5E7EB; border-radius: 1.25rem; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); overflow: hidden; position: relative; }
-    .highlight-gradient-blue { background: linear-gradient(135deg, rgba(59, 130, 246, 0), rgba(59, 130, 246, 0.05)); }
-    .highlight-gradient-green { background: linear-gradient(135deg, rgba(16, 185, 129, 0), rgba(16, 185, 129, 0.05)); }
-    .highlight-gradient-purple { background: linear-gradient(135deg, rgba(139, 92, 246, 0), rgba(139, 92, 246, 0.05)); }
-    .highlight-gradient-orange { background: linear-gradient(135deg, rgba(249, 115, 22, 0), rgba(249, 115, 22, 0.05)); }
-    .highlight-gradient-teal { background: linear-gradient(135deg, rgba(20, 184, 166, 0), rgba(20, 184, 166, 0.05)); }
-    .highlight-gradient-rose { background: linear-gradient(135deg, rgba(244, 63, 94, 0), rgba(244, 63, 94, 0.05)); }
-    .highlight-gradient-indigo { background: linear-gradient(135deg, rgba(99, 102, 241, 0), rgba(99, 102, 241, 0.05)); }
-    .highlight-gradient-amber { background: linear-gradient(135deg, rgba(245, 158, 11, 0), rgba(245, 158, 11, 0.05)); }
+    body {
+      font-family: 'Inter', 'Noto Sans SC', sans-serif;
+      background-color: #FFFFFF;
+    }
+
+    .card {
+      background-color: white;
+      border: 1px solid #E5E7EB;
+      border-radius: 1.25rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .highlight-gradient-blue {
+      background: linear-gradient(135deg, rgba(59, 130, 246, 0), rgba(59, 130, 246, 0.05));
+    }
+
+    .highlight-gradient-green {
+      background: linear-gradient(135deg, rgba(16, 185, 129, 0), rgba(16, 185, 129, 0.05));
+    }
+
+    .highlight-gradient-purple {
+      background: linear-gradient(135deg, rgba(139, 92, 246, 0), rgba(139, 92, 246, 0.05));
+    }
+
+    .highlight-gradient-orange {
+      background: linear-gradient(135deg, rgba(249, 115, 22, 0), rgba(249, 115, 22, 0.05));
+    }
+
+    .highlight-gradient-teal {
+      background: linear-gradient(135deg, rgba(20, 184, 166, 0), rgba(20, 184, 166, 0.05));
+    }
+
+    .highlight-gradient-rose {
+      background: linear-gradient(135deg, rgba(244, 63, 94, 0), rgba(244, 63, 94, 0.05));
+    }
+
+    .highlight-gradient-indigo {
+      background: linear-gradient(135deg, rgba(99, 102, 241, 0), rgba(99, 102, 241, 0.05));
+    }
+
+    .highlight-gradient-amber {
+      background: linear-gradient(135deg, rgba(245, 158, 11, 0), rgba(245, 158, 11, 0.05));
+    }
+    
+    /* 新增的样式 - 保持原有风格一致 */
+    .gradient-bg { background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); }
+    .timeline-line { position: absolute; left: 50%; top: 0; bottom: 0; width: 4px; background-color: #e2e8f0; transform: translateX(-50%); }
+    @media (max-width: 768px) { .timeline-line { left: 20px; } }
+    
+    /* IVD产业布局样式优化 */
+    .ivd-layout-container {
+      max-width: 100% !important;
+      margin: 2rem auto !important;
+      padding: 0 !important;
+    }
+    .ivd-layout-content {
+      display: flex !important;
+      justify-content: space-between !important;
+      align-items: center !important;
+      gap: 1rem !important;
+      flex-wrap: nowrap !important;
+    }
+    .ivd-layout-item {
+      flex: 1 !important;
+      min-width: unset !important;
+      max-width: 30% !important;
+    }
+    .ivd-layout-arrow {
+      flex-shrink: 0 !important;
+      font-size: 1.5rem !important;
+      color: #ccc !important;
+      line-height: 1 !important;
+      margin: 0 !important;
+    }
+    
+    /* 移动端适配 */
+    @media (max-width: 768px) {
+      .ivd-layout-content {
+        flex-wrap: wrap !important;
+      }
+      .ivd-layout-item {
+        max-width: 100% !important;
+        margin-bottom: 1rem !important;
+      }
+      .ivd-layout-arrow {
+        display: none !important;
+      }
+    }
   </style>
 </head>
+
 <body class="bg-white">
   <div class="max-w-7xl mx-auto p-4 md:p-8">
     <div class="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-6">
+      <!-- 标题卡片 -->
       <div class="card md:col-span-4 p-8 flex flex-col justify-center items-center text-center">
         <div class="absolute top-0 left-0 w-full h-full highlight-gradient-blue"></div>
         <div class="relative z-10">
@@ -33,6 +114,7 @@
         </div>
       </div>
 
+      <!-- 投资机构概况 -->
       <div class="card md:col-span-4 p-8">
         <div class="absolute top-0 left-0 w-full h-full highlight-gradient-green"></div>
         <div class="relative z-10">
@@ -51,91 +133,183 @@
               <p class="text-lg text-gray-700">中国最佳大健康领域投资机构</p>
             </div>
           </div>
+          <!-- 新增核心数据概览 - 融入到投资机构概况中 -->
+          <div class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="bg-white rounded-xl p-6 border border-green-100 text-center">
+              <div class="text-4xl font-bold text-blue-600 mb-2">18+</div>
+              <div class="text-sm font-medium text-gray-500 uppercase tracking-wide">投资项目总数</div>
+              <div class="mt-2 text-xs text-gray-400">专注医疗健康赛道</div>
+            </div>
+            <div class="bg-white rounded-xl p-6 border border-green-100 text-center">
+              <div class="text-4xl font-bold text-green-600 mb-2">40%</div>
+              <div class="text-sm font-medium text-gray-500 uppercase tracking-wide">天使/种子轮占比</div>
+              <div class="mt-2 text-xs text-gray-400">早期项目重点布局</div>
+            </div>
+            <div class="bg-white rounded-xl p-6 border border-green-100 text-center">
+              <div class="text-4xl font-bold text-purple-600 mb-2">6</div>
+              <div class="text-sm font-medium text-gray-500 uppercase tracking-wide">IVD诊断项目</div>
+              <div class="mt-2 text-xs text-gray-400">核心细分领域之一</div>
+            </div>
+            <div class="bg-white rounded-xl p-6 border border-green-100 text-center">
+              <div class="text-4xl font-bold text-orange-600 mb-2">全阶段</div>
+              <div class="text-sm font-medium text-gray-500 uppercase tracking-wide">多元化投资</div>
+              <div class="mt-2 text-xs text-gray-400">覆盖天使轮到C轮及以后</div>
+            </div>
+          </div>
           <p class="mt-6 text-gray-600">专注于投资医疗健康、清洁环境、科技创新等前瞻性产业领域，投资覆盖企业初创期、成长期、发展期等多个阶段，构建了完整的投资运营管理生态体系。</p>
         </div>
       </div>
 
+      <!-- IVD领域投资明细 -->
       <div class="card md:col-span-4 p-8">
         <div class="absolute top-0 left-0 w-full h-full highlight-gradient-purple"></div>
         <div class="relative z-10">
           <h2 class="text-2xl font-bold text-gray-800 mb-6 flex items-center"><i class="fa-solid fa-vial-circle-check mr-3 text-purple-500"></i>IVD领域投资明细</h2>
 
+          <!-- 丹娜生物 -->
           <div class="mb-8">
             <h3 class="text-xl font-bold text-purple-700 mb-3">丹娜生物（874289）- 侵袭性真菌病诊断</h3>
-            <table class="w-full text-sm text-left text-gray-600">
-              <thead class="bg-purple-50 text-xs uppercase text-purple-700">
-                <tr>
-                  <th class="px-4 py-3 rounded-l-lg">投资时间</th>
-                  <th class="px-4 py-3">投资轮次</th>
-                  <th class="px-4 py-3">投资金额</th>
-                  <th class="px-4 py-3">股权占比</th>
-                  <th class="px-4 py-3 rounded-r-lg">退出情况</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr class="bg-white border-b border-purple-100">
-                  <td class="px-4 py-3 font-medium">2014年12月</td>
-                  <td class="px-4 py-3">天使轮</td>
-                  <td class="px-4 py-3">约2000万元</td>
-                  <td class="px-4 py-3">10.53%</td>
-                  <td class="px-4 py-3 text-green-600 font-medium">2025年11月北交所上市</td>
-                </tr>
-              </tbody>
-            </table>
+            <div class="overflow-x-auto">
+              <table class="w-full text-sm text-left text-gray-600">
+                <thead class="bg-purple-50 text-xs uppercase text-purple-700">
+                  <tr>
+                    <th scope="col" class="px-4 py-3 rounded-l-lg">投资时间</th>
+                    <th scope="col" class="px-4 py-3">投资轮次</th>
+                    <th scope="col" class="px-4 py-3">投资金额</th>
+                    <th scope="col" class="px-4 py-3">股权占比</th>
+                    <th scope="col" class="px-4 py-3 rounded-r-lg">退出情况</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="bg-white border-b border-purple-100">
+                    <td class="px-4 py-3 font-medium">2014年12月</td>
+                    <td class="px-4 py-3">天使轮</td>
+                    <td class="px-4 py-3">约2000万元</td>
+                    <td class="px-4 py-3">10.53%</td>
+                    <td class="px-4 py-3 text-green-600 font-medium">2025年11月北交所上市</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
             <p class="mt-3 text-gray-600">三泽创投是丹娜生物最早期的机构投资人，经过10年培育，丹娜生物于2025年11月3日在北交所成功上市，成为近3年首家IVD上市公司，三泽创投获得丰厚回报。</p>
           </div>
 
+          <!-- 英盛生物 -->
           <div class="mb-8">
             <h3 class="text-xl font-bold text-purple-700 mb-3">英盛生物 - 临床质谱检测</h3>
-            <table class="w-full text-sm text-left text-gray-600">
-              <thead class="bg-purple-50 text-xs uppercase text-purple-700">
-                <tr>
-                  <th class="px-4 py-3 rounded-l-lg">投资时间</th>
-                  <th class="px-4 py-3">投资轮次</th>
-                  <th class="px-4 py-3">估值变化</th>
-                  <th class="px-4 py-3 rounded-r-lg">退出情况</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr class="bg-white border-b border-purple-100">
-                  <td class="px-4 py-3 font-medium">2016年2月</td>
-                  <td class="px-4 py-3">种子轮/天使轮</td>
-                  <td class="px-4 py-3 text-green-600 font-medium">C轮估值增长数十倍</td>
-                  <td class="px-4 py-3">未退出</td>
-                </tr>
-              </tbody>
-            </table>
+            <div class="overflow-x-auto">
+              <table class="w-full text-sm text-left text-gray-600">
+                <thead class="bg-purple-50 text-xs uppercase text-purple-700">
+                  <tr>
+                    <th scope="col" class="px-4 py-3 rounded-l-lg">投资时间</th>
+                    <th scope="col" class="px-4 py-3">投资轮次</th>
+                    <th scope="col" class="px-4 py-3">估值变化</th>
+                    <th scope="col" class="px-4 py-3 rounded-r-lg">退出情况</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="bg-white border-b border-purple-100">
+                    <td class="px-4 py-3 font-medium">2016年2月</td>
+                    <td class="px-4 py-3">种子轮/天使轮</td>
+                    <td class="px-4 py-3 text-green-600 font-medium">C轮估值增长数十倍</td>
+                    <td class="px-4 py-3">未退出</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="mt-3 text-gray-600">英盛生物是一家临床质谱企业，专注于质谱检测技术在临床诊断领域的应用。2023年3月完成数亿元C轮系列融资。</p>
           </div>
 
+          <!-- 乐准智芯 -->
           <div class="mb-8">
             <h3 class="text-xl font-bold text-purple-700 mb-3">乐准智芯 - 微流控化学发光</h3>
-            <table class="w-full text-sm text-left text-gray-600">
-              <thead class="bg-purple-50 text-xs uppercase text-purple-700">
-                <tr>
-                  <th class="px-4 py-3 rounded-l-lg">投资时间</th>
-                  <th class="px-4 py-3">投资轮次</th>
-                  <th class="px-4 py-3">投资角色</th>
-                  <th class="px-4 py-3 rounded-r-lg">退出情况</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr class="bg-white border-b border-purple-100">
-                  <td class="px-4 py-3 font-medium">2022年7月</td>
-                  <td class="px-4 py-3">A轮</td>
-                  <td class="px-4 py-3">领投</td>
-                  <td class="px-4 py-3">未退出</td>
-                </tr>
-                <tr class="bg-white">
-                  <td class="px-4 py-3 font-medium">此前</td>
-                  <td class="px-4 py-3">Pre-A轮</td>
-                  <td class="px-4 py-3">3500万元</td>
-                  <td class="px-4 py-3">未退出</td>
-                </tr>
-              </tbody>
-            </table>
+            <div class="overflow-x-auto">
+              <table class="w-full text-sm text-left text-gray-600">
+                <thead class="bg-purple-50 text-xs uppercase text-purple-700">
+                  <tr>
+                    <th scope="col" class="px-4 py-3 rounded-l-lg">投资时间</th>
+                    <th scope="col" class="px-4 py-3">投资轮次</th>
+                    <th scope="col" class="px-4 py-3">投资角色</th>
+                    <th scope="col" class="px-4 py-3 rounded-r-lg">退出情况</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="bg-white border-b border-purple-100">
+                    <td class="px-4 py-3 font-medium">2022年7月</td>
+                    <td class="px-4 py-3">A轮</td>
+                    <td class="px-4 py-3">领投</td>
+                    <td class="px-4 py-3">未退出</td>
+                  </tr>
+                  <tr class="bg-white">
+                    <td class="px-4 py-3 font-medium">此前</td>
+                    <td class="px-4 py-3">Pre-A轮</td>
+                    <td class="px-4 py-3">3500万元</td>
+                    <td class="px-4 py-3">未退出</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="mt-3 text-gray-600">国内少数能够通过微流控技术达到大型全自动化学发光检测设备的检测质量、检测成本及检测效率，同时实现大规模产业化生物芯片的公司。</p>
           </div>
 
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
+          <!-- 优化后的IVD产业布局模块 -->
+          <div class="ivd-layout-container">
+            <div style="background: #fff; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); padding: 2rem;">
+              <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 2rem;">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="#f2994a" />
+                </svg>
+                <h2 style="font-size: 2rem; font-weight: 600; color: #333; margin: 0;">IVD产业布局</h2>
+              </div>
+
+              <div class="ivd-layout-content">
+                <!-- 上游核心原料 -->
+                <div class="ivd-layout-item">
+                  <div style="width: 100px; height: 100px; background: #fff3e0; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem auto;">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M8 16.5C8 18.433 9.567 20 11.5 20C13.433 20 15 18.433 15 16.5C15 14.567 13.433 13 11.5 13C9.567 13 8 14.567 8 16.5ZM11.5 15C12.8807 15 14 16.1193 14 17.5C14 18.8807 12.8807 20 11.5 20C10.1193 20 9 18.8807 9 17.5C9 16.1193 10.1193 15 11.5 15Z" fill="#f2994a" />
+                      <path d="M19 3H5C3.89543 3 3 3.89543 3 5V19C3 20.1046 3.89543 21 5 21H19C20.1046 21 21 20.1046 21 19V5C21 3.89543 20.1046 3 19 3Z" stroke="#f2994a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </div>
+                  <h3 style="font-size: 1.25rem; font-weight: 600; color: #333; margin: 0 0 0.5rem 0; text-align: center;">上游核心原料</h3>
+                  <p style="font-size: 1rem; color: #666; margin: 0; text-align: center;">瀚海新酶</p>
+                </div>
+
+                <!-- 箭头1 -->
+                <div class="ivd-layout-arrow">→</div>
+
+                <!-- 中游技术平台 -->
+                <div class="ivd-layout-item">
+                  <div style="width: 100px; height: 100px; background: #fff3e0; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem auto;">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M4 6H20V18H4V6Z" stroke="#f2994a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                      <path d="M8 10H16M8 14H16" stroke="#f2994a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </div>
+                  <h3 style="font-size: 1.25rem; font-weight: 600; color: #333; margin: 0 0 0.5rem 0; text-align: center;">中游技术平台</h3>
+                  <p style="font-size: 1rem; color: #666; margin: 0; text-align: center;">英盛生物、乐准智芯</p>
+                </div>
+
+                <!-- 箭头2 -->
+                <div class="ivd-layout-arrow">→</div>
+
+                <!-- 下游诊断产品 -->
+                <div class="ivd-layout-item">
+                  <div style="width: 100px; height: 100px; background: #fff3e0; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem auto;">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M19 3H5C3.89543 3 3 3.89543 3 5V19C3 20.1046 3.89543 21 5 21H19C20.1046 21 21 20.1046 21 19V5C21 3.89543 20.1046 3 19 3Z" stroke="#f2994a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                      <path d="M9 12L11 14L15 10" stroke="#f2994a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </div>
+                  <h3 style="font-size: 1.25rem; font-weight: 600; color: #333; margin: 0 0 0.5rem 0; text-align: center;">下游诊断产品</h3>
+                  <p style="font-size: 1rem; color: #666; margin: 0; text-align: center;">丹娜生物、雅康博生物</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 其他IVD投资 -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8">
             <div class="bg-purple-50 rounded-xl p-5">
               <h4 class="font-bold text-purple-800 mb-2">雅康博生物</h4>
               <p class="text-sm text-gray-600">肿瘤个体化分子诊断</p>
@@ -149,60 +323,16 @@
               <p class="text-sm text-gray-600">特种酶研发生产，C轮估值增长数十倍</p>
             </div>
           </div>
-
-          <!-- IVD产业布局 -->
-          <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; max-width: 1200px; margin: 2rem auto; padding: 0 1rem;">
-            <div style="background: #fff; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); padding: 2rem;">
-              <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 2rem;">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="#f2994a"/>
-                </svg>
-                <h2 style="font-size: 2rem; font-weight: 600; color: #333; margin: 0;">IVD产业布局</h2>
-              </div>
-              <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 2rem;">
-                <div style="flex: 1; min-width: 200px; text-align: center;">
-                  <div style="width: 100px; height: 100px; background: #fff3e0; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem auto;">
-                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M8 16.5C8 18.433 9.567 20 11.5 20C13.433 20 15 18.433 15 16.5C15 14.567 13.433 13 11.5 13C9.567 13 8 14.567 8 16.5ZM11.5 15C12.8807 15 14 16.1193 14 17.5C14 18.8807 12.8807 20 11.5 20C10.1193 20 9 18.8807 9 17.5C9 16.1193 10.1193 15 11.5 15Z" fill="#f2994a"/>
-                      <path d="M19 3H5C3.89543 3 3 3.89543 3 5V19C3 20.1046 3.89543 21 5 21H19C20.1046 21 21 20.1046 21 19V5C21 3.89543 20.1046 3 19 3Z" stroke="#f2994a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                  </div>
-                  <h3 style="font-size: 1.25rem; font-weight: 600; color: #333; margin: 0 0 0.5rem 0;">上游核心原料</h3>
-                  <p style="font-size: 1rem; color: #666; margin: 0;">瀚海新酶</p>
-                </div>
-                <div style="color: #ccc; font-size: 2rem; line-height: 100px; flex-shrink: 0;">→</div>
-                <div style="flex: 1; min-width: 200px; text-align: center;">
-                  <div style="width: 100px; height: 100px; background: #fff3e0; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem auto;">
-                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M4 6H20V18H4V6Z" stroke="#f2994a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                      <path d="M8 10H16M8 14H16" stroke="#f2994a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                  </div>
-                  <h3 style="font-size: 1.25rem; font-weight: 600; color: #333; margin: 0 0 0.5rem 0;">中游技术平台</h3>
-                  <p style="font-size: 1rem; color: #666; margin: 0;">英盛生物、乐准智芯</p>
-                </div>
-                <div style="color: #ccc; font-size: 2rem; line-height: 100px; flex-shrink: 0;">→</div>
-                <div style="flex: 1; min-width: 200px; text-align: center;">
-                  <div style="width: 100px; height: 100px; background: #fff3e0; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem auto;">
-                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M19 3H5C3.89543 3 3 3.89543 3 5V19C3 20.1046 3.89543 21 5 21H19C20.1046 21 21 20.1046 21 19V5C21 3.89543 20.1046 3 19 3Z" stroke="#f2994a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                      <path d="M9 12L11 14L15 10" stroke="#f2994a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                  </div>
-                  <h3 style="font-size: 1.25rem; font-weight: 600; color: #333; margin: 0 0 0.5rem 0;">下游诊断产品</h3>
-                  <p style="font-size: 1rem; color: #666; margin: 0;">丹娜生物、雅康博生物</p>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
 
+      <!-- 其他医疗健康领域投资 -->
       <div class="card md:col-span-4 p-8">
         <div class="absolute top-0 left-0 w-full h-full highlight-gradient-orange"></div>
         <div class="relative z-10">
           <h2 class="text-2xl font-bold text-gray-800 mb-6 flex items-center"><i class="fa-solid fa-heart-pulse mr-3 text-orange-500"></i>其他医疗健康领域投资明细</h2>
 
+          <!-- 医疗器械领域 -->
           <div class="mb-8">
             <h3 class="text-xl font-bold text-orange-700 mb-4">医疗器械领域</h3>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -229,6 +359,7 @@
             </div>
           </div>
 
+          <!-- 生物技术/医药领域 -->
           <div class="mb-8">
             <h3 class="text-xl font-bold text-orange-700 mb-4">生物技术/医药领域</h3>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -254,9 +385,101 @@
               </div>
             </div>
           </div>
+          
+          <!-- 新增细分领域投资特点 -->
+          <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- IVD诊断特点 -->
+            <div class="border border-orange-100 rounded-xl p-6 bg-white">
+              <div class="flex items-center mb-4">
+                <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                  <i class="fa-solid fa-microscope text-blue-600 text-xl"></i>
+                </div>
+                <div>
+                  <h3 class="text-lg font-bold text-gray-900">IVD诊断</h3>
+                  <span class="text-xs font-semibold bg-blue-100 text-blue-800 px-2 py-0.5 rounded">6个项目</span>
+                </div>
+              </div>
+              <p class="text-sm text-gray-600 mb-4">这是三泽创投布局最深、项目最多的核心赛道。重点关注技术创新驱动、具备明确临床价值与市场潜力的企业，覆盖分子诊断、POCT、第三方医学检验等多个方向。</p>
+              <div class="bg-gray-50 p-4 rounded-lg text-xs text-gray-600">
+                <strong class="block mb-2 text-gray-800">典型项目特征：</strong>
+                <ul class="space-y-1 list-disc list-inside">
+                  <li>技术创新导向（如微流控、纳米材料）</li>
+                  <li>解决明确的临床未满足需求</li>
+                  <li>商业模式清晰，具备快速市场渗透潜力</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- 生物技术/医药特点 -->
+            <div class="border border-orange-100 rounded-xl p-6 bg-white">
+              <div class="flex items-center mb-4">
+                <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                  <i class="fa-solid fa-dna text-green-600 text-xl"></i>
+                </div>
+                <div>
+                  <h3 class="text-lg font-bold text-gray-900">生物技术/医药</h3>
+                  <span class="text-xs font-semibold bg-green-100 text-green-800 px-2 py-0.5 rounded">5个项目</span>
+                </div>
+              </div>
+              <p class="text-sm text-gray-600 mb-4">作为技术壁垒高、长期价值显著的领域，三泽创投在此领域的投资偏向于拥有核心平台技术（如基因编辑、细胞治疗、新型递送系统）的早期团队。</p>
+              <div class="bg-gray-50 p-4 rounded-lg text-xs text-gray-600">
+                <strong class="block mb-2 text-gray-800">典型项目特征：</strong>
+                <ul class="space-y-1 list-disc list-inside">
+                  <li>拥有颠覆性或平台型核心技术</li>
+                  <li>团队具备深厚的科研与产业背景</li>
+                  <li>研发管线规划清晰，知识产权布局完善</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- 医疗器械特点 -->
+            <div class="border border-orange-100 rounded-xl p-6 bg-white">
+              <div class="flex items-center mb-4">
+                <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                  <i class="fa-solid fa-stethoscope text-purple-600 text-xl"></i>
+                </div>
+                <div>
+                  <h3 class="text-lg font-bold text-gray-900">医疗器械</h3>
+                  <span class="text-xs font-semibold bg-purple-100 text-purple-800 px-2 py-0.5 rounded">4个项目</span>
+                </div>
+              </div>
+              <p class="text-sm text-gray-600 mb-4">关注国产替代机会明确、注册路径清晰、市场空间大的细分品类，如高值耗材、影像设备、手术机器人等。投资阶段覆盖从早期到成长期。</p>
+              <div class="bg-gray-50 p-4 rounded-lg text-xs text-gray-600">
+                <strong class="block mb-2 text-gray-800">典型项目特征：</strong>
+                <ul class="space-y-1 list-disc list-inside">
+                  <li>产品性能对标国际领先水平</li>
+                  <li>注册证获取路径明确，临床进度领先</li>
+                  <li>具备成本优势与本土化服务能力</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- 其他医疗健康特点 -->
+            <div class="border border-orange-100 rounded-xl p-6 bg-white">
+              <div class="flex items-center mb-4">
+                <div class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                  <i class="fa-solid fa-heart-pulse text-orange-600 text-xl"></i>
+                </div>
+                <div>
+                  <h3 class="text-lg font-bold text-gray-900">其他医疗健康</h3>
+                  <span class="text-xs font-semibold bg-orange-100 text-orange-800 px-2 py-0.5 rounded">3个项目</span>
+                </div>
+              </div>
+              <p class="text-sm text-gray-600 mb-4">涵盖数字健康、医疗服务、医疗消费等创新模式。投资逻辑侧重于商业模式创新、用户流量获取以及与传统医疗服务的结合能力。</p>
+              <div class="bg-gray-50 p-4 rounded-lg text-xs text-gray-600">
+                <strong class="block mb-2 text-gray-800">典型项目特征：</strong>
+                <ul class="space-y-1 list-disc list-inside">
+                  <li>互联网或数字化手段赋能传统医疗</li>
+                  <li>用户增长与粘性数据表现突出</li>
+                  <li>具备清晰的盈利模型与规模化路径</li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
+      <!-- 投资策略分析 -->
       <div class="card md:col-span-4 p-8">
         <div class="absolute top-0 left-0 w-full h-full highlight-gradient-teal"></div>
         <div class="relative z-10">
@@ -281,6 +504,93 @@
               </ul>
             </div>
           </div>
+          
+          <!-- 新增投资策略总结 -->
+          <div class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="bg-teal-50 p-6 rounded-xl border border-teal-100">
+              <i class="fa-solid fa-bullseye text-teal-600 text-3xl mb-4"></i>
+              <h3 class="font-bold text-lg mb-2">鲜明的赛道聚焦</h3>
+              <p class="text-sm text-gray-600">自成立之初即明确“医疗健康”为核心投资赛道，并在其中进一步深耕IVD诊断、生物技术/医药、医疗器械等细分领域，形成了清晰的投资地图与行业认知积累。</p>
+            </div>
+            <div class="bg-teal-50 p-6 rounded-xl border border-teal-100">
+              <i class="fa-solid fa-seedling text-teal-600 text-3xl mb-4"></i>
+              <h3 class="font-bold text-lg mb-2">全阶段覆盖，侧重早期</h3>
+              <p class="text-sm text-gray-600">投资组合实现了从天使轮到C轮及以后的全阶段覆盖，但超过75%的资金投向天使轮、Pre-A轮和A轮，显示了其作为风险投资机构偏好早期高成长性项目的本质。</p>
+            </div>
+            <div class="bg-teal-50 p-6 rounded-xl border border-teal-100">
+              <i class="fa-solid fa-lightbulb text-teal-600 text-3xl mb-4"></i>
+              <h3 class="font-bold text-lg mb-2">技术驱动与价值投资</h3>
+              <p class="text-sm text-gray-600">投资决策高度关注技术创新与临床价值，而非简单的商业模式复制。在IVD和生物医药领域尤其明显，青睐拥有核心技术壁垒和解决重大临床问题的团队。</p>
+            </div>
+            <div class="bg-teal-50 p-6 rounded-xl border border-teal-100">
+              <i class="fa-solid fa-network-wired text-teal-600 text-3xl mb-4"></i>
+              <h3 class="font-bold text-lg mb-2">构建生态与协同</h3>
+              <p class="text-sm text-gray-600">通过在同一赛道内进行多项目布局，有意构建项目间的协同生态。例如，在IVD领域投资的不同技术路线的公司，未来可能在研发、生产或市场上产生合作。</p>
+            </div>
+          </div>
+          
+          <!-- 投资历程时间轴 -->
+          <div class="mt-12">
+            <h3 class="text-xl font-bold text-teal-700 mb-6 text-center">详细投资历程与阶段分析</h3>
+            <div class="relative">
+                <div class="timeline-line hidden md:block"></div>
+                
+                <!-- 2018-2020 -->
+                <div class="relative flex flex-col md:flex-row items-center mb-12">
+                    <div class="md:w-1/2 md:pr-12 md:text-right order-2 md:order-1 pl-8 md:pl-0 relative">
+                        <div class="absolute -left-[29px] top-0 w-4 h-4 bg-blue-600 rounded-full border-4 border-white hidden md:block"></div>
+                        <div class="md:hidden absolute -left-[29px] top-0 w-4 h-4 bg-blue-600 rounded-full border-4 border-white"></div>
+                        <h3 class="text-xl font-bold text-blue-800">2018-2020: 早期聚焦期</h3>
+                        <p class="text-gray-600 mt-3 text-sm leading-relaxed">
+                            在此期间，三泽创投的投资活动相对较少，主要进行市场调研与赛道选择，确立了以医疗健康为核心的投资方向，并完成了首批种子轮项目的布局。
+                        </p>
+                        <ul class="mt-3 space-y-1 text-xs text-gray-500 list-disc list-inside">
+                            <li>确立医疗健康为核心赛道</li>
+                            <li>完成首批种子轮项目试水</li>
+                            <li>积累行业资源与判断能力</li>
+                        </ul>
+                    </div>
+                    <div class="md:w-1/2 order-1 md:order-2 mb-4 md:mb-0"></div>
+                </div>
+
+                <!-- 2021-2023 -->
+                <div class="relative flex flex-col md:flex-row items-center mb-12">
+                    <div class="md:w-1/2 order-2 md:order-1 mb-4 md:mb-0"></div>
+                    <div class="md:w-1/2 md:pl-12 md:text-left order-1 md:order-2 pl-8 md:pl-0 relative">
+                        <div class="absolute -left-[29px] top-0 w-4 h-4 bg-green-600 rounded-full border-4 border-white hidden md:block"></div>
+                        <div class="md:hidden absolute -left-[29px] top-0 w-4 h-4 bg-green-600 rounded-full border-4 border-white"></div>
+                        <h3 class="text-xl font-bold text-green-800">2021-2023: 快速成长期</h3>
+                        <p class="text-gray-600 mt-3 text-sm leading-relaxed">
+                            投资节奏显著加快，年度投资项目数量达到峰值。重点布局IVD诊断与医疗器械领域，同时开始向生物技术/医药延伸。投资阶段以天使轮、Pre-A轮和A轮为主，积极参与项目孵化与成长。
+                        </p>
+                        <ul class="mt-3 space-y-1 text-xs text-gray-500 list-disc list-inside">
+                            <li>IVD诊断成为投资重点</li>
+                            <li>投资阶段覆盖更加完善</li>
+                            <li>建立项目组合与协同效应</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 2024至今 -->
+                <div class="relative flex flex-col md:flex-row items-center">
+                    <div class="md:w-1/2 md:pr-12 md:text-right order-2 md:order-1 pl-8 md:pl-0 relative">
+                        <div class="absolute -left-[29px] top-0 w-4 h-4 bg-purple-600 rounded-full border-4 border-white hidden md:block"></div>
+                        <div class="md:hidden absolute -left-[29px] top-0 w-4 h-4 bg-purple-600 rounded-full border-4 border-white"></div>
+                        <h3 class="text-xl font-bold text-purple-800">2024至今: 成熟扩张期</h3>
+                        <p class="text-gray-600 mt-3 text-sm leading-relaxed">
+                            在巩固早期和成长期项目优势的基础上，开始向中后期项目（B轮、C轮及以后）进行探索性投资，追求更为稳健的回报。投资策略趋于多元化，关注具有平台技术或颠覆性创新的企业。
+                        </p>
+                        <ul class="mt-3 space-y-1 text-xs text-gray-500 list-disc list-inside">
+                            <li>探索中后期项目投资</li>
+                            <li>投资策略多元化、平台化</li>
+                            <li>追求稳健回报与生态构建</li>
+                        </ul>
+                    </div>
+                    <div class="md:w-1/2 order-1 md:order-2 mb-4 md:mb-0"></div>
+                </div>
+            </div>
+          </div>
+          
           <div class="mt-8 bg-teal-50 rounded-xl p-6">
             <h3 class="text-xl font-bold text-teal-800 mb-3">投资理念总结</h3>
             <p class="text-gray-700 italic text-lg">"三生万物、与子同泽"，体现了其对被投企业的长期陪伴和共同成长的愿景。坚持价值投资、深度研究、产业赋能和风险分散。</p>
@@ -288,6 +598,7 @@
         </div>
       </div>
 
+      <!-- 投资组合价值评估 -->
       <div class="card md:col-span-4 p-8">
         <div class="absolute top-0 left-0 w-full h-full highlight-gradient-rose"></div>
         <div class="relative z-10">
@@ -331,6 +642,7 @@
         </div>
       </div>
 
+      <!-- 投资分布图表 -->
       <div class="card md:col-span-4 p-8">
         <div class="absolute top-0 left-0 w-full h-full highlight-gradient-indigo"></div>
         <div class="relative z-10">
@@ -352,6 +664,7 @@
         </div>
       </div>
 
+      <!-- 结语 -->
       <div class="card md:col-span-4 p-8">
         <div class="absolute top-0 left-0 w-full h-full highlight-gradient-amber"></div>
         <div class="relative z-10 text-center">
@@ -363,72 +676,52 @@
   </div>
 </body>
 <script>
+  // 投资阶段分布图表 - 整合第二个文件的图表数据
   const stageCtx = document.getElementById('stageChart').getContext('2d');
   const stageChart = new Chart(stageCtx, {
     type: 'doughnut',
     data: {
-      labels: ['天使轮/种子轮', 'Pre-A/A轮', 'B轮', 'C轮及以后'],
+      labels: ['天使/种子轮', 'Pre-A/A轮', 'B轮及以后'],
       datasets: [{
-        label: '投资阶段分布',
-        data: [40, 35, 15, 10],
-        backgroundColor: [
-          'rgba(99, 102, 241, 0.7)',
-          'rgba(99, 102, 241, 0.5)',
-          'rgba(99, 102, 241, 0.3)',
-          'rgba(99, 102, 241, 0.1)'
-        ],
-        borderColor: 'rgba(99, 102, 241, 1)',
-        borderWidth: 1
+        data: [40, 35, 25], // 基于文本描述的估算比例
+        backgroundColor: ['#3b82f6', '#10b981', '#8b5cf6'],
+        borderWidth: 0,
+        hoverOffset: 4
       }]
     },
     options: {
       responsive: true,
       maintainAspectRatio: false,
       plugins: {
-        legend: {
-          position: 'bottom',
-        }
+        legend: { position: 'bottom', labels: { usePointStyle: true, padding: 20 } }
       }
     }
   });
+  
+  // 细分领域分布图表 - 整合第二个文件的图表数据
   const sectorCtx = document.getElementById('sectorChart').getContext('2d');
   const sectorChart = new Chart(sectorCtx, {
     type: 'bar',
     data: {
-      labels: ['IVD诊断', '医疗器械', '生物技术/医药', '其他医疗健康'],
+      labels: ['IVD诊断', '生物技术/医药', '医疗器械', '其他医疗健康'],
       datasets: [{
-        label: '投资项目数量',
-        data: [6, 4, 5, 3],
-        backgroundColor: [
-          'rgba(99, 102, 241, 0.6)',
-          'rgba(249, 115, 22, 0.6)',
-          'rgba(16, 185, 129, 0.6)',
-          'rgba(244, 63, 94, 0.6)'
-        ],
-        borderColor: [
-          'rgba(99, 102, 241, 1)',
-          'rgba(249, 115, 22, 1)',
-          'rgba(16, 185, 129, 1)',
-          'rgba(244, 63, 94, 1)'
-        ],
-        borderWidth: 1
+        label: '项目数量',
+        data: [6, 5, 4, 3],
+        backgroundColor: ['#3b82f6', '#10b981', '#8b5cf6', '#f97316'],
+        borderRadius: 6,
+        barThickness: 40
       }]
     },
     options: {
       responsive: true,
       maintainAspectRatio: false,
-      plugins: {
-        legend: {
-          display: false
-        }
-      },
       scales: {
-        y: {
-          beginAtZero: true,
-          ticks: {
-            precision: 0
-          }
-        }
+        y: { beginAtZero: true, ticks: { stepSize: 1 }, grid: { display: false } },
+        x: { grid: { display: false } }
+      },
+      plugins: {
+        legend: { display: false },
+        tooltip: { callbacks: { label: function(context) { return context.parsed.y + ' 个项目'; } } }
       }
     }
   });
